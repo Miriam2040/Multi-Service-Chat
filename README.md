@@ -3,9 +3,11 @@
 A versatile chatbot application that provides three distinct services: image generation, music generation, and research paper creation. The application uses a smart routing system to direct user requests to the appropriate service.
 
 **User Chat Demo**
+
 ![Demo](examples/chat.gif)
 
 **Cost Management Tracker**
+
 ![Demo](examples/costs.gif)
 
 ## Features
