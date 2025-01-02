@@ -97,18 +97,12 @@ The multi-service chatbot implementation follows a modular, service-oriented arc
 - Custom getter function with validation
 - Separate keys for different services
 
-#### SSL Handling
-- Custom SSL adapter for development
-- Proper SSL verification in production
-- Configurable SSL settings per environment
-
 ### 4. Cost Management
 
 #### Budget Tracking
 - Per-service cost tracking
 - Global budget limit configuration
-- Cost-aware routing decisions
-- Price estimation before generation
+- Persistent transactions saving on disk
 
 ### 5. Scalability Considerations
 
@@ -122,8 +116,7 @@ The multi-service chatbot implementation follows a modular, service-oriented arc
 - Streaming responses for large content
 - Efficient memory usage
 - Configurable timeouts and retry logic
-- Batch processing capabilities
-
+- 
 ### 6. Testing Strategy
 
 #### Mock Implementations
