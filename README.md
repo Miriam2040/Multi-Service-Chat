@@ -177,8 +177,7 @@ This is where you interact with the AI system:
    - You'll see the text appear progressively
    - Final output is formatted as a complete research paper
   
-   ![Project Banner](examples/cost_tracker_costs.PNG)
-   ![Project Banner](examples/cost_tracker_transactions.PNG)
+   ![Project Banner](examples/chat_research_papers.PNG)
 
 ### Cost Monitoring Tab
 Tracks usage and costs:
@@ -187,8 +186,8 @@ Tracks usage and costs:
 - Cost per service type
 - latest transactions
 
-   ![Project Banner](examples/chat_research_papers.PNG)
-
+   ![Project Banner](examples/cost_tracker_costs.PNG)
+   ![Project Banner](examples/cost_tracker_transactions.PNG)
 
 ## Architecture Overview
 
@@ -209,7 +208,7 @@ The application follows a clean, modular architecture:
 ### Router System
 - Two implementations:
   1. `MockRouter`: For development/testing
-  2. `OpenAIRouter`: For production use
+  2. `OpenAIRouter`: For production use, using model to classify user propmt to the right categoy
 - Intelligently routes requests to appropriate generators
 
 ### Content Generators
