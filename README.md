@@ -76,23 +76,40 @@ To obtain these keys:
 - OpenAI API Key: Create at [OpenAI Platform](https://udioapi.pro)
 
 ### Configurable Settings
-The following settings can be adjusted in `config.py`:
+The following settings can be adjusted in `src/config.py`:
 
 ```python
 # System Settings
-MODE = 'DEV'           # 'DEV' for mock services, 'PROD' for real APIs
-BUDGET = 20            # Total budget limit in currency units
+MODE = 'PRODUCTION'    # 'PRODUCTION' for real APIs
+BUDGET = 20           # Total budget limit in currency units
 
 # Image Generation Settings
-IMAGE_WIDTH = 512      # Output image width
-IMAGE_HEIGHT = 512     # Output image height
-IMAGE_TEMPERATURE = 0.8  # Creativity level (0.0-1.0)
+IMAGE_API_KEY         # API key for BFL service
+IMAGE_GENERATION_MODEL = "flux.1.1-pro"  # Model to use for image generation
+IMAGE_WIDTH = 512     # Output image width  
+IMAGE_HEIGHT = 512    # Output image height
+IMAGE_COST = 0.04     # Cost per image generation request
 
-# Song Generation Settings
-SONG_TEMPERATURE = 0.9 # Creativity for music generation
+# Song Generation Settings 
+SONG_GENERATION_TOKEN # API key for UDIO service
+SONG_GENERATION_URL   # API endpoint for song generation
+SONG_GENERATION_MODEL = "chirp-v3.0"  # Model to use for music generation
+SONG_COST = 0.05      # Cost per song generation request
+SONG_FEED_URL         # API endpoint for retrieving generated songs
+SONG_TEMPERATURE = 0.9 # Creativity level for music generation (0.0-1.0)
 
 # Research Settings
+RESEARCH_API_KEY      # OpenAI API key
+RESEARCH_MODEL_NAME = "gpt-4o-mini"  # Model to use for research
+RESEARCH_COST = 0.01  # Cost per research request
 RESEARCH_MAX_TOKENS = 4000  # Maximum length of research output
+RESEARCH_SYSTEM_MESSAGE  # System prompt for research generation
+
+# Router Settings
+ROUTER_MODEL_NAME = "gpt-4o-mini"  # Model for intent classification
+ROUTER_API_KEY        # API key (reuses OpenAI key)
+ROUTER_COST = 0.01    # Cost per routing request
+ROUTER_SYSTEM_MESSAGE # System prompt for intent classification
 ```
 
 ## Starting the Application
