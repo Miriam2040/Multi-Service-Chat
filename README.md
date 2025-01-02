@@ -19,6 +19,18 @@ A versatile chatbot application that provides three distinct services: image gen
 - 💰 **Budget Management**: Tracks API usage costs
 - 🔄 **Real-time Streaming**: Supports streaming responses for research generation
 
+## Quick Start
+For a detailed walkthrough of the system's features and capabilities, check out our interactive Jupyter notebook:
+
+[User Guide Notebook](user_guide.ipynb)
+
+This notebook contains:
+
+ - Running the server
+ - Running the UI
+ - Running tests
+ - Usage examples
+
 ## Prerequisites
 
 - Python 3.8 or higher
@@ -117,13 +129,13 @@ ROUTER_SYSTEM_MESSAGE # System prompt for intent classification
 ### 1. Start the Backend Server
 Start the FastAPI backend server:
 ```bash
-uvicorn service:app --reload --port 8000
+uvicorn src.services.service:app --reload --port 8000
 ```
 
 ### 2. Launch the User Interface
 In a new terminal, start the Streamlit frontend:
 ```bash
-streamlit run app.py
+streamlit run src/ui/chat.py
 ```
 
 The application will be available at:
