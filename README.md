@@ -263,28 +263,29 @@ The application follows a clean, modular architecture:
   - Example transaction record:
     ```json
     {
-   {
-    "id": "b05eeb81-b5a6-4df0-b4ca-f8129ffca258",
-    "timestamp": "2025-01-02T10:30:03.892170",
-    "type": "SunoSongGenerator",
-    "cost": 0.05,
-    "prompt": "create a song aboout the moon"
-  },
-  {
-    "id": "2743f7cf-159c-4135-ab60-bed1e9cbfbc1",
-    "timestamp": "2025-01-02T10:38:11.561070",
-    "type": "OpenAIRouter",
-    "cost": 0.01,
-    "prompt": "hi"
-  },
-  {
-    "id": "ced87ccf-f580-4dfd-9b66-2d0d3e4593f5",
-    "timestamp": "2025-01-02T10:38:11.568626",
-    "type": "OpenAIResearchGenerator",
-    "cost": 0.01,
-    "prompt": "hi"
-  }
+       {
+        "id": "b05eeb81-b5a6-4df0-b4ca-f8129ffca258",
+        "timestamp": "2025-01-02T10:30:03.892170",
+        "type": "SunoSongGenerator",
+        "cost": 0.05,
+        "prompt": "create a song aboout the moon"
+      },
+      {
+        "id": "2743f7cf-159c-4135-ab60-bed1e9cbfbc1",
+        "timestamp": "2025-01-02T10:38:11.561070",
+        "type": "OpenAIRouter",
+        "cost": 0.01,
+        "prompt": "hi"
+      },
+      {
+        "id": "ced87ccf-f580-4dfd-9b66-2d0d3e4593f5",
+        "timestamp": "2025-01-02T10:38:11.568626",
+        "type": "OpenAIResearchGenerator",
+        "cost": 0.01,
+        "prompt": "hi"
+      }
     }
+   ```
 
 - **Cost Optimization**
   - DEV mode for testing without costs
