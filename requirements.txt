@@ -1,0 +1,40 @@
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+streamlit>=1.28.0
+
+# HTTP Client
+requests>=2.31.0
+
+# API Clients
+openai>=1.3.0  # For OpenAI API integration
+flux-api>=0.4.0  # For Flux image generation
+
+# Data Validation and Serialization
+pydantic>=2.4.2
+
+# Data Processing
+python-multipart>=0.0.6  # For handling form data
+python-dotenv>=1.0.0  # For loading environment variables
+
+# Development and Testing
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+black>=23.10.1  # Code formatting
+flake8>=6.1.0  # Code linting
+mypy>=1.6.1  # Type checking
+
+# Logging and Monitoring
+loguru>=0.7.2  # Enhanced logging
+
+# Security
+python-jose[cryptography]>=3.3.0  # For JWT handling
+passlib[bcrypt]>=1.7.4  # For password hashing
+
+# Documentation
+mkdocs>=1.5.3  # For generating documentation
+mkdocs-material>=9.4.6  # Theme for documentation
+
+# Production
+gunicorn>=21.2.0  # Production server
