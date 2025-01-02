@@ -151,34 +151,44 @@ This is where you interact with the AI system:
 
 1. **Image Generation**
    ```plaintext
-   User: "Create an image of a sunset over mountains"
+   User: "Create an image of a moon and cat"
    ```
    - The system will display the generated image
    - Generation typically takes 10-20 seconds
    - Images are displayed directly in the chat
+  
+   ![Project Banner](examples/user_chat_image_generated.PNG)
 
 2. **Music Generation**
    ```plaintext
-   User: "Make me a happy song about summer"
+   User: "Make me a song about sun"
    ```
    - An audio player will appear with the generated song
    - Generation typically takes 30-60 seconds
    - Songs can be played, paused, and downloaded
 
+    ![Project Banner](examples/chat_song.PNG)
+
 3. **Research Generation**
    ```plaintext
-   User: "Research the impact of AI on healthcare"
+   User: "I want research paper about google"
    ```
    - Research content streams in real-time
    - You'll see the text appear progressively
    - Final output is formatted as a complete research paper
+  
+   ![Project Banner](examples/cost_tracker_costs.PNG)
+   ![Project Banner](examples/cost_tracker_transactions.PNG)
 
 ### Cost Monitoring Tab
 Tracks usage and costs:
 - Current budget usage
-- Cost per service type
-- Number of generations
 - Remaining budget
+- Cost per service type
+- latest transactions
+
+   ![Project Banner](examples/chat_research_papers.PNG)
+
 
 ## Architecture Overview
 
