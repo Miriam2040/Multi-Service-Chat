@@ -80,7 +80,7 @@ The following settings can be adjusted in `src/config.py`:
 
 ```python
 # System Settings
-MODE = 'PRODUCTION'    # 'PRODUCTION' for real APIs
+MODE = 'PRODUCTION'    # 'PRODUCTION' for real APIs 'DEV' for moch usage for dev/testing
 BUDGET = 20           # Total budget limit in currency units
 
 # Image Generation Settings
