@@ -238,6 +238,58 @@ The application follows a clean, modular architecture:
 - Handles environment variables
 - Manages API keys and settings
 
+### Cost Tracking System
+- **Budget Management**
+  - Tracks overall budget limit from config
+  - Maintains running total of expenses
+  - Prevents operations when budget is exceeded
+
+- **Per-Service Cost Tracking**
+  - Image Generation: $0.04 per request
+  - Song Generation: $0.05 per request
+  - Research Generation: $0.01 per request
+  - Routing: $0.01 per request
+
+- **Implementation Details**
+  - Each generator implements `get_price()` method
+  - Costs are tracked before API calls
+  - Real-time budget updates
+  - Cost monitoring dashboard in UI
+
+- **Transaction Storage**
+  - All transactions are saved to disk in JSON format
+  - Located at `data/costs/costs.json`
+  - Each transaction includes timestamp, service type, cost, and status
+  - Example transaction record:
+    ```json
+    {
+   {
+    "id": "b05eeb81-b5a6-4df0-b4ca-f8129ffca258",
+    "timestamp": "2025-01-02T10:30:03.892170",
+    "type": "SunoSongGenerator",
+    "cost": 0.05,
+    "prompt": "create a song aboout the moon"
+  },
+  {
+    "id": "2743f7cf-159c-4135-ab60-bed1e9cbfbc1",
+    "timestamp": "2025-01-02T10:38:11.561070",
+    "type": "OpenAIRouter",
+    "cost": 0.01,
+    "prompt": "hi"
+  },
+  {
+    "id": "ced87ccf-f580-4dfd-9b66-2d0d3e4593f5",
+    "timestamp": "2025-01-02T10:38:11.568626",
+    "type": "OpenAIResearchGenerator",
+    "cost": 0.01,
+    "prompt": "hi"
+  }
+    }
+
+- **Cost Optimization**
+  - DEV mode for testing without costs
+  - Usage analytics for cost optimization
+
 ## Error Handling
 
 The application includes comprehensive error handling for:
@@ -245,15 +297,6 @@ The application includes comprehensive error handling for:
 - Budget limits
 - Invalid requests
 - Network issues
-
-## Cost Management
-
-Service costs per request:
-- Image Generation: $0.04
-- Song Generation: $0.05
-- Research Generation: $0.01
-
-The system actively tracks usage and ensures operations stay within budget.
 
 ## Contributing
 
@@ -263,13 +306,9 @@ The system actively tracks usage and ensures operations stay within budget.
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-[MIT License](LICENSE)
-
 ## Support
 
-For support, please open an issue in the repository or contact the maintainers.
+For support, please open an issue in the repository.
 
 ## Next Steps
 
@@ -280,38 +319,18 @@ The following improvements and features are planned for future development:
 - Implement history saving and chat session persistence
 - Add the ability to favorite and share generated content
 - Create a gallery view for previously generated images and songs
-- Add export functionality for research papers in different formats (PDF, Word)
+- Add export functionality for research papers in different formats (PDF, Word) and for images (PNG, JPEG)
 
 ### Technical Improvements
 - Implement caching to reduce API costs for similar requests
 - Add retry mechanisms for failed API calls
 - Implement batch processing for multiple requests
-- Add support for more image and audio formats
-- Enhance the router with better prompt understanding
-- Add unit tests and integration tests coverage
 
 ### Scalability
 - Implement load balancing for high traffic
 - Add database support for storing generation history
 - Implement rate limiting per user/IP
-- Add support for horizontal scaling
 - Implement job queues for long-running tasks
-
-### Monitoring and Analytics
-- Add detailed usage analytics dashboard
-- Implement automated cost optimization
-- Add performance monitoring and alerting
-- Create automated budget warning system
-- Add API health monitoring
-
-### Content Generation
-- Add support for more content types (e.g., video, code)
-- Implement style transfer for images
-- Add support for longer research papers
-- Implement song genre selection
-- Add image editing capabilities
-
-To contribute to any of these features, please check the issues section of the repository or create a new issue to discuss implementation details.
 
 ## Acknowledgments
 
