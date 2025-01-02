@@ -260,7 +260,7 @@ The application follows a clean, modular architecture:
   - All transactions are saved to disk in JSON format
   - Located at `data/costs/costs.json`
   - Each transaction includes timestamp, service type, cost, and status
-  - Example transaction record:
+  - Example transactions record:
     ```json
     {
        {
@@ -297,6 +297,32 @@ The application includes comprehensive error handling for:
 - Budget limits
 - Invalid requests
 - Network issues
+
+# Logging
+
+Logging is implemented using Python's built-in logging module. Logs are crucial for monitoring system behavior and troubleshooting.
+
+- **Location**: `logs/api.log`
+- **Format**: `timestamp - level - message`
+- **Levels**: ERROR, WARNING, INFO, DEBUG
+
+Example log message:
+```
+2024-01-02 12:34:56,789 - INFO - Request 1704203696789 received - Prompt: Create a sunset image
+```
+
+Log management includes daily rotation, size limits (10MB), and 30-day retention.
+
+# Testing
+
+The project uses pytest for testing. Tests are organized into unit tests, integration tests, and end-to-end tests.
+
+Run tests with:
+```bash
+pytest                 # Run all tests
+pytest --cov=src      # With coverage
+pytest tests/test_router.py  # Specific file
+```
 
 ## Contributing
 
