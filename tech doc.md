@@ -30,7 +30,12 @@ According to the text to image [Leaderboard](https://artificialanalysis.ai/text-
 - **Integration Ease**: Well-documented API with Python SDK
 
 ### 4. Suno for song Generation
-According to research about the best song generations services [Review](https://kripeshadwani.com/ai-music-generators/), Suno was selected as the song generation service
+According to research about the best song generations services [Review](https://kripeshadwani.com/ai-music-generators/), Suno was selected as the song generation service:
+- **Cost Efficiency**: Provides competitive pricing compared to alternatives
+- **Performance**: High-quality output with fast generation times
+- **API Reliability**: Stable API with good uptime
+- **Output Quality**: Consistently high-quality image generation
+- **Integration Ease**: Well-documented API with Python SDK
 
 ## Architecture Overview
 
