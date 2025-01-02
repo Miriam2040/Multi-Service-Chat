@@ -29,7 +29,7 @@ A versatile chatbot application that provides three distinct services: image gen
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Miriam2040/Multi-Service-Chat.git
    cd multi-service-chat
    ```
 
@@ -71,9 +71,9 @@ OPENAI_API_KEY=your_openai_api_key   # For research and routing
 ```
 
 To obtain these keys:
-- Flux API Key: Register at [Black Forest Labs](https://www.blackforestlabs.com)
+- Flux API Key: Register at [Black Forest Labs](https://api.bfl.ml/auth/login)
 - Suno API Key: Sign up at [Suno AI](https://www.suno.ai)
-- OpenAI API Key: Create at [OpenAI Platform](https://platform.openai.com)
+- OpenAI API Key: Create at [OpenAI Platform](https://udioapi.pro)
 
 ### Configurable Settings
 The following settings can be adjusted in `config.py`:
