@@ -22,7 +22,7 @@ A versatile chatbot application that provides three distinct services: image gen
 ## Quick Start
 For a detailed walkthrough of the system's features and capabilities, check out our interactive Jupyter notebook:
 
-[User Guide Notebook](user_guide.ipynb)
+[User Guide Notebook](User_Guide.ipynb)
 
 This notebook contains:
 
