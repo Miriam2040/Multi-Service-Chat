@@ -22,14 +22,19 @@ Streamlit was chosen as the frontend solution for these advantages:
 - **Deployment Simplicity**: Easy to deploy and maintain
 
 ### 3. Flux for Image Generation
-According to the performance and cost analysis from artificialanalysis.ai, Flux was selected as the image generation service because:
+According to the text to image [Leaderboard](https://artificialanalysis.ai/text-to-image), Flux was selected as the image generation service because:
 - **Cost Efficiency**: Provides competitive pricing compared to alternatives
 - **Performance**: High-quality output with fast generation times
 - **API Reliability**: Stable API with good uptime
 - **Output Quality**: Consistently high-quality image generation
 - **Integration Ease**: Well-documented API with Python SDK
 
+### 4. Suno for song Generation
+According to research about the best song generations services [Review](https://kripeshadwani.com/ai-music-generators/), Suno was selected as the song generation service
+
 ## Architecture Overview
+
+ ![Project Banner](examples/architecture.PNG)
 
 The multi-service chatbot implementation follows a modular, service-oriented architecture designed for extensibility, maintainability, and robust error handling. Here are the key components and design decisions:
 
@@ -45,7 +50,7 @@ The multi-service chatbot implementation follows a modular, service-oriented arc
 - Two-tier routing architecture:
   - `MockRouter` for development/testing
   - `OpenAIRouter` for production
-- Intelligent routing using OpenAI's API for natural language understanding
+- Intelligent routing using OpenAI's API with enfornce output json schema to let LLM classify the propmt intent
 - Factory pattern implementation for creating appropriate generators
 
 #### Content Generators
