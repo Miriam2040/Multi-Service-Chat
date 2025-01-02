@@ -191,6 +191,8 @@ Tracks usage and costs:
 
 ## Architecture Overview
 
+ ![Project Banner](examples/architecture.PNG)
+
 The application follows a clean, modular architecture:
 
 ### Frontend Layer (`app.py`)
