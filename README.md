@@ -285,8 +285,7 @@ The application follows a clean, modular architecture:
         "prompt": "hi"
       }
     }
-   ```
-
+   
 - **Cost Optimization**
   - DEV mode for testing without costs
   - Usage analytics for cost optimization
